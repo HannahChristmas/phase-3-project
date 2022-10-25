@@ -3,7 +3,7 @@ class CreateParks < ActiveRecord::Migration[6.1]
     create_table :parks do |t|
       t.string :park_name
       t.string :park_state
-      t.string :body
+      t.string :description
       t.integer :state_id
     end
   end

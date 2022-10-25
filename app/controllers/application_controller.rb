@@ -11,12 +11,24 @@ class ApplicationController < Sinatra::Base
     park = Park.create(
       park_name: params[:park_name],
       park_state: params[:park_state],
-      body: params[:body]
+      description: params[:description]
     )
     park.to_json
   end
 
-  
+  patch '/parks/:id' do
+    park = Park.find(params[:id])
+    park.update(
+      description: params[:description]
+    )
+    park.to_json
+  end
+
+  delete '/parks/:id' do
+    park = Park.find(params[:id])
+    park.destroy
+    park.to_json
+  end
 
 end
 
