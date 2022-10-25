@@ -7,6 +7,16 @@ class ApplicationController < Sinatra::Base
     parks.to_json
   end
 
+  post '/parks' do
+    park = Park.create(
+      park_name: params[:park_name],
+      park_state: params[:park_state],
+      body: params[:body]
+    )
+    park.to_json
+  end
+
   
 
 end
+
