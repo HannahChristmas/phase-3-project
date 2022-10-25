@@ -13,14 +13,14 @@
 ActiveRecord::Schema.define(version: 2022_10_25_175434) do
 
   create_table "parks", force: :cascade do |t|
-    t.string "name"
-    t.string "state"
+    t.string "park_name"
+    t.string "park_state"
     t.string "body"
     t.integer "state_id"
   end
 
   create_table "states", force: :cascade do |t|
-    t.string "name"
+    t.string "state_name"
     t.integer "park_id"
   end
 
