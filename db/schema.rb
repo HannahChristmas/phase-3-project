@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 2022_10_25_175434) do
 
   create_table "states", force: :cascade do |t|
     t.string "state_name"
-    t.integer "park_id"
   end
 
 end
