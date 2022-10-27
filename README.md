@@ -5,12 +5,12 @@
 This application allows users to learn more about the National Parks at All Parks and add their own at Add A Park. At All Parks, users are able to view, edit, update, and delete parks. At Add A Park, users can add a park name, state, and description. If the state already exists in the database, it will appear in the autofilled list. If the state does not exist yet, it will automatically add the new state on submit.
 
 ## Built with
-* React.js (frontend)
-* Material UI (frontend)
-* Sinatra, ActiveRecord (backend)
+* React.js- [frontend](https://github.com/HannahChristmas/my-app-frontend.git)
+* Material UI- frontend
+* Sinatra, ActiveRecord- backend
 
 ## Installation Instructions
-* Fork and clone both the frontend and backend on github
+* Fork and clone both the [frontend](https://github.com/HannahChristmas/my-app-frontend.git) and backend on github
 * Run bundle install in terminal
 * Run rake server. This will start your backend server.
 * Run npm install in terminal
@@ -26,10 +26,10 @@ This application allows users to learn more about the National Parks at All Park
 I am not open to contributions at this time. 
 
 ## Blog Link
-My blog post about event listeners can be found [here.](https://medium.com/@hc109909/controlled-forms-in-react-eb5e6df85c89)
+My blog post about Active Record can be found [here.](https://medium.com/@hc109909/active-record-8dcf757d86f4)
 
 ## Video Link
-My Youtube video about this project can be found [here.](https://youtu.be/eth0QJixxKw)
+My Youtube video about this project can be found [here.](https://youtu.be/9MenB4-nEI0)
 
 ## Resources
 * [CSS Form Styling](w3schools.com/css/css_form.asp) 
