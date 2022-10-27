@@ -4,16 +4,20 @@ class ApplicationController < Sinatra::Base
   # Add your routes here
   get '/parks' do
     parks = Park.all.order(:park_name)
-    parks.to_json
+    parks.to_json(include: :state)
+  end
+
+  get '/states' do
+    states = State.all.order(:state_name)
+    states.to_json
   end
 
   post '/parks' do
-    park = Park.create(
+    park = State.find_or_create_by(state_name: params[:state_name]).parks.create(
       park_name: params[:park_name],
-      park_state: params[:park_state],
-      description: params[:description]
+      description: params[:description],
     )
-    park.to_json
+    park.to_json(include: :state)
   end
 
   patch '/parks/:id' do
@@ -21,7 +25,7 @@ class ApplicationController < Sinatra::Base
     park.update(
       description: params[:description]
     )
-    park.to_json
+    park.to_json(include: :state)
   end
 
   delete '/parks/:id' do
