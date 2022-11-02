@@ -22,7 +22,7 @@ class ApplicationController < Sinatra::Base
   post '/states' do
     state = State.find_or_create_by(state_name: params[:state_name])
     state.to_json(include: :parks)
-  end
+  end 
  
   patch '/parks/:id' do
     park = Park.find(params[:id])
@@ -30,7 +30,7 @@ class ApplicationController < Sinatra::Base
       description: params[:description]
     )
     park.to_json(include: :state)
-  end
+  end 
 
   delete '/parks/:id' do
     park = Park.find(params[:id])
