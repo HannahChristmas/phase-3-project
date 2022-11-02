@@ -36,7 +36,7 @@ class ApplicationController < Sinatra::Base
     park = Park.find(params[:id])
     park.destroy
     park.to_json
-  end
+  end 
 
 end
 
