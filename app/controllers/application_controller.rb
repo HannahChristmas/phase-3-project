@@ -17,7 +17,7 @@ class ApplicationController < Sinatra::Base
       description: params[:description]
     )
     park.to_json(include: :state)
-  end
+  end 
 
   post '/states' do
     state = State.find_or_create_by(state_name: params[:state_name])
