@@ -4,7 +4,7 @@ class ApplicationController < Sinatra::Base
   get '/parks' do
     parks = Park.all.order(:park_name)
     parks.to_json(include: :state)
-  end
+  end 
 
   get '/states' do
     states = State.all.order(:state_name)
