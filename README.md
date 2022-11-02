@@ -12,6 +12,8 @@ This application allows users to learn more about the National Parks at All Park
 ## Installation Instructions
 * Fork and clone both the [frontend](https://github.com/HannahChristmas/my-app-frontend.git) and backend on github
 * Run bundle install in terminal
+* Run rake db:migrate
+* Run rake db:seed
 * Run rake server. This will start your backend server.
 * Run npm install in terminal
 * Run npm start. This will start your frontend server.
