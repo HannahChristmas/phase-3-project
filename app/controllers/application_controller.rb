@@ -6,10 +6,10 @@ class ApplicationController < Sinatra::Base
     parks.to_json(include: :state)
   end 
 
-  get '/states' do
+  get 'states' do
     states = State.all.order(:state_name)
     states.to_json(include: :parks)
-  end
+  end 
 
   post '/parks' do
     park = State.find_or_create_by(state_name: params[:state_name]).parks.create(
