@@ -23,7 +23,7 @@ class ApplicationController < Sinatra::Base
     state = State.find_or_create_by(state_name: params[:state_name])
     state.to_json(include: :parks)
   end
-
+ 
   patch '/parks/:id' do
     park = Park.find(params[:id])
     park.update(
